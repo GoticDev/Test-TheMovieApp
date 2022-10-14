@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class HomePresenter  {
     
@@ -22,6 +23,11 @@ extension HomePresenter: HomePresenterProtocol {
     func viewDidLoad() {
 //        interactor?.getMoviesDataInteractor()
         print("me ha llamado la view")
+        view?.setInitialSetup(placeHolder: "Ingresa tu nombre",
+                              selfieButtonTitle: "Capturar Selfie",
+                              sendDataButtonTitle: "Enviar Datos",
+                              showMovieListTitle: "Mostrar lista de peliculas",
+                              background: UIColor.secondarySystemFill)
     }
     
     func getMoviesDataPresenter() {

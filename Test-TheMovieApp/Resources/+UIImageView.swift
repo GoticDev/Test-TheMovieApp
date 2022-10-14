@@ -5,7 +5,6 @@
 //  Created by Victor De la Torre on 13/10/22.
 //
 
-import Foundation
 import UIKit
 
 extension UIImageView {
@@ -26,6 +25,13 @@ extension UIImageView {
                 self.image = image
             }
         }.resume()
+    }
+    
+    func roundedImage() {
+        self.layer.cornerRadius = (self.frame.size.width) / 2;
+        self.clipsToBounds = true
+        self.layer.borderWidth = 3.0
+        self.layer.borderColor = UIColor.white.cgColor
     }
     
 }

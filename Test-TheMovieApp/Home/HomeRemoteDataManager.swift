@@ -27,7 +27,6 @@ class HomeRemoteDataManager:HomeRemoteDataManagerInputProtocol {
                 print("Error:", error.localizedDescription)
                 
             }
-            
         }
     }
 }

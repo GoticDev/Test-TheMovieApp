@@ -16,37 +16,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homecito!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p36-g4-OKa">
-                                <rect key="frame" x="165.5" y="437.5" width="83.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUy-Mv-sxL">
-                                <rect key="frame" x="127" y="544" width="160" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-rC-I5y">
+                                <rect key="frame" x="10" y="118" width="394" height="642"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QuB-eo-LJr">
+                                        <rect key="frame" x="60" y="0.0" width="274" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0nw-mc-VUX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-xb-Ehf">
+                                        <rect key="frame" x="52" y="78" width="290" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="290" id="MTl-ZN-Qiu"/>
+                                            <constraint firstAttribute="height" constant="300" id="jAU-TF-u9x"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-vk-lKI">
+                                        <rect key="frame" x="60" y="416" width="274" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9Jb-DD-er8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="selfieAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kyq-Lv-X4g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kl7-kz-N9B">
+                                        <rect key="frame" x="60" y="504" width="274" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6dB-0Y-rzg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="sendDataAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5lC-kJ-DN3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUy-Mv-sxL">
+                                        <rect key="frame" x="60" y="592" width="274" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Uik-wJ-j6G"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="showListMoviesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWM-kc-IgF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Uik-wJ-j6G"/>
+                                    <constraint firstItem="4mk-vk-lKI" firstAttribute="leading" secondItem="ovf-rC-I5y" secondAttribute="leading" constant="60" id="4xI-wt-tI4"/>
+                                    <constraint firstItem="zUy-Mv-sxL" firstAttribute="leading" secondItem="ovf-rC-I5y" secondAttribute="leading" constant="60" id="EQI-xC-D8E"/>
+                                    <constraint firstAttribute="trailing" secondItem="zUy-Mv-sxL" secondAttribute="trailing" constant="60" id="HOk-CM-5vz"/>
+                                    <constraint firstAttribute="trailing" secondItem="QuB-eo-LJr" secondAttribute="trailing" constant="60" id="N2b-p7-PZi"/>
+                                    <constraint firstItem="QuB-eo-LJr" firstAttribute="leading" secondItem="ovf-rC-I5y" secondAttribute="leading" constant="60" id="Z8X-au-Xod"/>
+                                    <constraint firstAttribute="trailing" secondItem="4mk-vk-lKI" secondAttribute="trailing" constant="60" id="mzb-u3-7NU"/>
+                                    <constraint firstItem="kl7-kz-N9B" firstAttribute="leading" secondItem="ovf-rC-I5y" secondAttribute="leading" constant="60" id="qS5-T9-wUC"/>
+                                    <constraint firstAttribute="trailing" secondItem="kl7-kz-N9B" secondAttribute="trailing" constant="60" id="yl3-nl-may"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="showListMoviesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWM-kc-IgF"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="p36-g4-OKa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sss-gl-KlL"/>
-                            <constraint firstItem="p36-g4-OKa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vdp-5G-dg1"/>
-                            <constraint firstItem="zUy-Mv-sxL" firstAttribute="top" secondItem="p36-g4-OKa" secondAttribute="bottom" constant="85.5" id="aQz-vk-v50"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zUy-Mv-sxL" secondAttribute="bottom" constant="268" id="bSi-uh-MFV"/>
-                            <constraint firstItem="zUy-Mv-sxL" firstAttribute="centerX" secondItem="p36-g4-OKa" secondAttribute="centerX" id="npT-2s-799"/>
-                            <constraint firstItem="zUy-Mv-sxL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="onX-F3-j9O"/>
+                            <constraint firstItem="ovf-rC-I5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Pet-7x-D0v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ovf-rC-I5y" secondAttribute="trailing" constant="10" id="Qtj-ug-FoS"/>
+                            <constraint firstItem="ovf-rC-I5y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cRz-IU-kAa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Moy-oS-ulp"/>
                     <connections>
+                        <outlet property="nameTF" destination="QuB-eo-LJr" id="JlX-Sy-Zgd"/>
+                        <outlet property="selfieButton" destination="4mk-vk-lKI" id="OdE-fe-CnL"/>
+                        <outlet property="selfieImage" destination="Tz3-xb-Ehf" id="eOm-gk-Gnv"/>
+                        <outlet property="sendDataButton" destination="kl7-kz-N9B" id="Tbx-MY-1dC"/>
                         <outlet property="showListMovieButton" destination="zUy-Mv-sxL" id="5Pb-nS-U9c"/>
                     </connections>
                 </viewController>

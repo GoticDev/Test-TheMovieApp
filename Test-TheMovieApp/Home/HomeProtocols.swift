@@ -12,6 +12,11 @@ import UIKit
 protocol HomeViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: HomePresenterProtocol? { get set }
+    func setInitialSetup(placeHolder: String,
+                         selfieButtonTitle: String,
+                         sendDataButtonTitle: String,
+                         showMovieListTitle: String,
+                         background: UIColor)
 }
 
 protocol HomeRouterProtocol: AnyObject {

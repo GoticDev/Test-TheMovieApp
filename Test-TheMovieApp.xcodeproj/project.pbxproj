@@ -16,6 +16,15 @@
 		BA5A592C28F85E4F00152530 /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5A592528F85E4F00152530 /* MoviesListView.swift */; };
 		BA5A592D28F85E4F00152530 /* MoviesListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5A592628F85E4F00152530 /* MoviesListRemoteDataManager.swift */; };
 		BA69C2BD28F903120087AC29 /* +UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69C2BC28F903120087AC29 /* +UIImageView.swift */; };
+		BA69C2C028F90F6A0087AC29 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BA69C2BF28F90F6A0087AC29 /* FirebaseAnalytics */; };
+		BA69C2C228F90F6A0087AC29 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BA69C2C128F90F6A0087AC29 /* FirebaseAuth */; };
+		BA69C2C428F90F6A0087AC29 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BA69C2C328F90F6A0087AC29 /* FirebaseCrashlytics */; };
+		BA69C2C628F90F6A0087AC29 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = BA69C2C528F90F6A0087AC29 /* FirebaseDatabase */; };
+		BA69C2C828F90F6A0087AC29 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BA69C2C728F90F6A0087AC29 /* FirebaseFirestore */; };
+		BA69C2CA28F90F6A0087AC29 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BA69C2C928F90F6A0087AC29 /* FirebaseStorage */; };
+		BA69C2CC28F910C40087AC29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA69C2CB28F910C40087AC29 /* GoogleService-Info.plist */; };
+		BA69C2CE28F9216D0087AC29 /* +UIViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69C2CD28F9216C0087AC29 /* +UIViewcontroller.swift */; };
+		BA69C2D028F931360087AC29 /* +UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69C2CF28F931360087AC29 /* +UIAlertController.swift */; };
 		BA98D83528F8D4E70015E2A0 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BA98D83428F8D4E70015E2A0 /* ProgressHUD */; };
 		BA98D83D28F8D8160015E2A0 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA98D83628F8D8160015E2A0 /* MovieDetailPresenter.swift */; };
 		BA98D83E28F8D8160015E2A0 /* MovieDetailLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA98D83728F8D8160015E2A0 /* MovieDetailLocalDataManager.swift */; };
@@ -57,6 +66,9 @@
 		BA5A592528F85E4F00152530 /* MoviesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListView.swift; sourceTree = "<group>"; };
 		BA5A592628F85E4F00152530 /* MoviesListRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListRemoteDataManager.swift; sourceTree = "<group>"; };
 		BA69C2BC28F903120087AC29 /* +UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIImageView.swift"; sourceTree = "<group>"; };
+		BA69C2CB28F910C40087AC29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA69C2CD28F9216C0087AC29 /* +UIViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIViewcontroller.swift"; sourceTree = "<group>"; };
+		BA69C2CF28F931360087AC29 /* +UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIAlertController.swift"; sourceTree = "<group>"; };
 		BA98D83628F8D8160015E2A0 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		BA98D83728F8D8160015E2A0 /* MovieDetailLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailLocalDataManager.swift; sourceTree = "<group>"; };
 		BA98D83828F8D8160015E2A0 /* MovieDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailProtocols.swift; sourceTree = "<group>"; };
@@ -94,7 +106,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA98D83528F8D4E70015E2A0 /* ProgressHUD in Frameworks */,
+				BA69C2C228F90F6A0087AC29 /* FirebaseAuth in Frameworks */,
+				BA69C2CA28F90F6A0087AC29 /* FirebaseStorage in Frameworks */,
 				BAF5D3A528F7DCD00037720D /* Alamofire in Frameworks */,
+				BA69C2C428F90F6A0087AC29 /* FirebaseCrashlytics in Frameworks */,
+				BA69C2C028F90F6A0087AC29 /* FirebaseAnalytics in Frameworks */,
+				BA69C2C828F90F6A0087AC29 /* FirebaseFirestore in Frameworks */,
+				BA69C2C628F90F6A0087AC29 /* FirebaseDatabase in Frameworks */,
 				7A3C71EFA4A61DB23374EFF9 /* Pods_Test_TheMovieApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +208,7 @@
 				BAF5D37528F7B2C90037720D /* Assets.xcassets */,
 				BAF5D37728F7B2C90037720D /* LaunchScreen.storyboard */,
 				BAF5D37A28F7B2C90037720D /* Info.plist */,
+				BA69C2CB28F910C40087AC29 /* GoogleService-Info.plist */,
 			);
 			path = "Test-TheMovieApp";
 			sourceTree = "<group>";
@@ -215,6 +234,8 @@
 			children = (
 				BAF5D39E28F7D5FF0037720D /* Constants.swift */,
 				BA69C2BC28F903120087AC29 /* +UIImageView.swift */,
+				BA69C2CD28F9216C0087AC29 /* +UIViewcontroller.swift */,
+				BA69C2CF28F931360087AC29 /* +UIAlertController.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -248,6 +269,12 @@
 			packageProductDependencies = (
 				BAF5D3A428F7DCD00037720D /* Alamofire */,
 				BA98D83428F8D4E70015E2A0 /* ProgressHUD */,
+				BA69C2BF28F90F6A0087AC29 /* FirebaseAnalytics */,
+				BA69C2C128F90F6A0087AC29 /* FirebaseAuth */,
+				BA69C2C328F90F6A0087AC29 /* FirebaseCrashlytics */,
+				BA69C2C528F90F6A0087AC29 /* FirebaseDatabase */,
+				BA69C2C728F90F6A0087AC29 /* FirebaseFirestore */,
+				BA69C2C928F90F6A0087AC29 /* FirebaseStorage */,
 			);
 			productName = "Test-TheMovieApp";
 			productReference = BAF5D36928F7B2C60037720D /* Test-TheMovieApp.app */;
@@ -280,6 +307,7 @@
 			packageReferences = (
 				BAF5D3A328F7DCD00037720D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BA98D83328F8D4E70015E2A0 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				BA69C2BE28F90F6A0087AC29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = BAF5D36A28F7B2C60037720D /* Products */;
 			projectDirPath = "";
@@ -297,6 +325,7 @@
 			files = (
 				BAF5D37928F7B2C90037720D /* LaunchScreen.storyboard in Resources */,
 				BAF5D37628F7B2C90037720D /* Assets.xcassets in Resources */,
+				BA69C2CC28F910C40087AC29 /* GoogleService-Info.plist in Resources */,
 				BAE7210228F8AE750062C9B3 /* MoviesListTableViewCell.xib in Resources */,
 				BAF5D37428F7B2C60037720D /* Main.storyboard in Resources */,
 			);
@@ -375,6 +404,8 @@
 				BA5A592D28F85E4F00152530 /* MoviesListRemoteDataManager.swift in Sources */,
 				BAE7210128F8AE750062C9B3 /* MoviesListTableViewCell.swift in Sources */,
 				BA98D83F28F8D8160015E2A0 /* MovieDetailProtocols.swift in Sources */,
+				BA69C2D028F931360087AC29 /* +UIAlertController.swift in Sources */,
+				BA69C2CE28F9216D0087AC29 /* +UIViewcontroller.swift in Sources */,
 				BAF5D3A728F7EE350037720D /* HomeEntity.swift in Sources */,
 				BAE7210428F8B49F0062C9B3 /* MovieListEntity.swift in Sources */,
 				BAF5D39628F7CCBF0037720D /* HomePresenter.swift in Sources */,
@@ -602,6 +633,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BA69C2BE28F90F6A0087AC29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		BA98D83328F8D4E70015E2A0 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
@@ -621,6 +660,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BA69C2BF28F90F6A0087AC29 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA69C2BE28F90F6A0087AC29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BA69C2C128F90F6A0087AC29 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA69C2BE28F90F6A0087AC29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BA69C2C328F90F6A0087AC29 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA69C2BE28F90F6A0087AC29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		BA69C2C528F90F6A0087AC29 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA69C2BE28F90F6A0087AC29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		BA69C2C728F90F6A0087AC29 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA69C2BE28F90F6A0087AC29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		BA69C2C928F90F6A0087AC29 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA69C2BE28F90F6A0087AC29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		BA98D83428F8D4E70015E2A0 /* ProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BA98D83328F8D4E70015E2A0 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
