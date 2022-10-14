@@ -37,24 +37,19 @@ class ServiceManager {
     }
     
     func showRequestAndResponse(_ url: String, _ headerss: [String: Any]?, _ params: [String: Any]?, _ json: JSON?) {
-        
         print("URL: \(url)")
-        
         if let request = params?.prettyPrintedJSON {
             print("REQUEST: \(request)")
         }
-        
         if let headers = headerss?.prettyPrintedJSON {
             print("HEADERS: \(headers)")
         }
-        
         if let response = json {
             print("RESPONSE: \(response)")
         }
     }
     
 }
-
 
 extension Dictionary {
     var prettyPrintedJSON: String? {

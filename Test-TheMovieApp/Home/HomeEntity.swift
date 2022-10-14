@@ -8,13 +8,13 @@
 import Foundation
 
 struct HomeEntity: Codable {
-    let title: String
-    let description: String
-    let poster: String
+    let title: String?
+//    let description: String?
+//    let poster: String?
     
     enum CodingKeys: String, CodingKey {
         case title
-        case description = "overview"
-        case poster = "poster_path"
+//        case description = "overview"
+//        case poster = "poster_path"
     }
 }

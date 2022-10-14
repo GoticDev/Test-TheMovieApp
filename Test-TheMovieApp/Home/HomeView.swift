@@ -21,17 +21,11 @@ class HomeView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        ServiceManager.shared.request(url: Constants.popularUrl, httpMethod: .get, parameters: nil) { _ in
-//        }
         self.presenter?.viewDidLoad()
     }
     
     @IBAction func showListMoviesAction(_ sender: Any) {
-        self.presenter?.getMoviesDataPresenter()
-        
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "MoviesListView")
-        self.navigationController?.pushViewController(vc, animated: true)
+        presenter?.showMovieListView()
     }
     
 }

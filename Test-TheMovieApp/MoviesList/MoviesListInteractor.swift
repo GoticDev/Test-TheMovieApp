@@ -14,9 +14,29 @@ class MoviesListInteractor: MoviesListInteractorInputProtocol {
     weak var presenter: MoviesListInteractorOutputProtocol?
     var localDatamanager: MoviesListLocalDataManagerInputProtocol?
     var remoteDatamanager: MoviesListRemoteDataManagerInputProtocol?
+    
+    var movieList: MovieListEntity?
 
+    func getMoviesDataInteractor() {
+        remoteDatamanager?.getMoviesDataManager()
+    }
+    
+    func movieListData() -> [MovieResults] {
+        guard let movieList = movieList?.results else {
+            return [MovieResults]()
+        }
+        return movieList
+    }
+    
 }
 
 extension MoviesListInteractor: MoviesListRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
+    func sendDataMoviesList(with model: MovieListEntity) {
+        // TODO: Implement use case methods
+        print("si llega")
+//        self.movieList = model
+        presenter?.interactorSendListMoviesData(receivedData: model.results)
+    }
+    
+    
 }

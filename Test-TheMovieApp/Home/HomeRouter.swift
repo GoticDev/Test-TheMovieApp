@@ -11,7 +11,6 @@ import UIKit
 
 class HomeRouter: HomeRouterProtocol {
     
-
     class func createHomeModule() -> UIViewController {
         let navController = mainStoryboard.instantiateViewController(withIdentifier: "NavController")
         if let view = navController.children.first as? HomeView {
@@ -39,4 +38,10 @@ class HomeRouter: HomeRouterProtocol {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }
     
+    func presentMovieList(from view: HomeViewProtocol) {
+        let movieListView = MoviesListRouter.createMoviesListModule()
+        if let newView = view as? UIViewController {
+            newView.navigationController?.pushViewController(movieListView, animated: true)
+        }
+    }
 }

@@ -17,6 +17,7 @@ protocol HomeViewProtocol: AnyObject {
 protocol HomeRouterProtocol: AnyObject {
     // PRESENTER -> ROUTER
     static func createHomeModule() -> UIViewController
+    func presentMovieList(from view: HomeViewProtocol)
 }
 
 protocol HomePresenterProtocol: AnyObject {
@@ -27,6 +28,7 @@ protocol HomePresenterProtocol: AnyObject {
     
     func viewDidLoad()
     func getMoviesDataPresenter()
+    func showMovieListView()
 }
 
 protocol HomeInteractorOutputProtocol: AnyObject {

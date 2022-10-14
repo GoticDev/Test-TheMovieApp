@@ -12,24 +12,28 @@ import UIKit
 protocol MoviesListViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: MoviesListPresenterProtocol? { get set }
+    func presenterSendMovieListView(receivedData: [MovieResults])
 }
 
-protocol MoviesListWireFrameProtocol: AnyObject {
+protocol MoviesListRouterProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createMoviesListModule() -> UIViewController
+    func presentMovieDetal(from view: MoviesListViewProtocol, withData: MovieResults)
 }
 
 protocol MoviesListPresenterProtocol: AnyObject {
     // VIEW -> PRESENTER
     var view: MoviesListViewProtocol? { get set }
     var interactor: MoviesListInteractorInputProtocol? { get set }
-    var wireFrame: MoviesListWireFrameProtocol? { get set }
+    var router: MoviesListRouterProtocol? { get set }
     
     func viewDidLoad()
+    func showDetailView(with data: MovieResults)
 }
 
 protocol MoviesListInteractorOutputProtocol: AnyObject {
 // INTERACTOR -> PRESENTER
+    func interactorSendListMoviesData(receivedData: [MovieResults])
 }
 
 protocol MoviesListInteractorInputProtocol: AnyObject {
@@ -37,6 +41,9 @@ protocol MoviesListInteractorInputProtocol: AnyObject {
     var presenter: MoviesListInteractorOutputProtocol? { get set }
     var localDatamanager: MoviesListLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: MoviesListRemoteDataManagerInputProtocol? { get set }
+    
+    func getMoviesDataInteractor()
+    func movieListData() -> [MovieResults]
 }
 
 protocol MoviesListDataManagerInputProtocol: AnyObject {
@@ -46,10 +53,12 @@ protocol MoviesListDataManagerInputProtocol: AnyObject {
 protocol MoviesListRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: MoviesListRemoteDataManagerOutputProtocol? { get set }
+    func getMoviesDataManager()
 }
 
 protocol MoviesListRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
+    func sendDataMoviesList(with model: MovieListEntity)
 }
 
 protocol MoviesListLocalDataManagerInputProtocol: AnyObject {

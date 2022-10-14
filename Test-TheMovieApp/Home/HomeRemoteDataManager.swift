@@ -10,7 +10,6 @@ import Foundation
 
 class HomeRemoteDataManager:HomeRemoteDataManagerInputProtocol {
     var remoteRequestHandler: HomeRemoteDataManagerOutputProtocol?
-    
     var homeEntity = [HomeEntity]()
     
     func getMoviesDataManager() {

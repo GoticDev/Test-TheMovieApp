@@ -21,12 +21,17 @@ extension HomePresenter: HomePresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
 //        interactor?.getMoviesDataInteractor()
+        print("me ha llamado la view")
     }
     
     func getMoviesDataPresenter() {
-        
         interactor?.getMoviesDataInteractor()
     }
+    
+    func showMovieListView() {
+        router?.presentMovieList(from: view!)
+    }
+    
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
