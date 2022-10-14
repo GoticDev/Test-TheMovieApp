@@ -38,7 +38,10 @@ class HomeView: UIViewController, CLLocationManagerDelegate {
         self.reference = Database.database().reference()
         self.hideKeyboardWhenTappedAround()
         setInitialImage()
-        
+        getLocation()
+    }
+    
+    private func getLocation() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
