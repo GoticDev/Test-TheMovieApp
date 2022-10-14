@@ -20,11 +20,9 @@ class MovieDetailPresenter  {
 extension MovieDetailPresenter: MovieDetailPresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
-        print("hoola Detalle y tengo dato \(movieResult?.title)")
         if let movieResult = self.movieResult {
             view?.initialSetup(with: movieResult)
         }
-        
     }
 }
 

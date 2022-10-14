@@ -52,7 +52,6 @@
 		BAF5D39F28F7D5FF0037720D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5D39E28F7D5FF0037720D /* Constants.swift */; };
 		BAF5D3A228F7DA510037720D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5D3A128F7DA510037720D /* ServiceManager.swift */; };
 		BAF5D3A528F7DCD00037720D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BAF5D3A428F7DCD00037720D /* Alamofire */; };
-		BAF5D3A728F7EE350037720D /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF5D3A628F7EE350037720D /* HomeEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +95,6 @@
 		BAF5D39528F7CCBF0037720D /* HomeRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataManager.swift; sourceTree = "<group>"; };
 		BAF5D39E28F7D5FF0037720D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BAF5D3A128F7DA510037720D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
-		BAF5D3A628F7EE350037720D /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		D342F72F23561D1406530F4A /* Pods-Test-TheMovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-TheMovieApp.debug.xcconfig"; path = "Target Support Files/Pods-Test-TheMovieApp/Pods-Test-TheMovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +149,16 @@
 				BAE720FE28F8AE5D0062C9B3 /* MoviesListCell */,
 			);
 			path = MoviesList;
+			sourceTree = "<group>";
+		};
+		BA69C2D128F943130087AC29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA69C2BC28F903120087AC29 /* +UIImageView.swift */,
+				BA69C2CD28F9216C0087AC29 /* +UIViewcontroller.swift */,
+				BA69C2CF28F931360087AC29 /* +UIAlertController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BA98D84428F8D81E0015E2A0 /* MovieDetail */ = {
@@ -224,7 +232,6 @@
 				BAF5D39228F7CCBF0037720D /* HomeProtocols.swift */,
 				BAF5D39328F7CCBF0037720D /* HomeInteractor.swift */,
 				BAF5D39528F7CCBF0037720D /* HomeRemoteDataManager.swift */,
-				BAF5D3A628F7EE350037720D /* HomeEntity.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -233,9 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF5D39E28F7D5FF0037720D /* Constants.swift */,
-				BA69C2BC28F903120087AC29 /* +UIImageView.swift */,
-				BA69C2CD28F9216C0087AC29 /* +UIViewcontroller.swift */,
-				BA69C2CF28F931360087AC29 /* +UIAlertController.swift */,
+				BA69C2D128F943130087AC29 /* Extensions */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -406,7 +411,6 @@
 				BA98D83F28F8D8160015E2A0 /* MovieDetailProtocols.swift in Sources */,
 				BA69C2D028F931360087AC29 /* +UIAlertController.swift in Sources */,
 				BA69C2CE28F9216D0087AC29 /* +UIViewcontroller.swift in Sources */,
-				BAF5D3A728F7EE350037720D /* HomeEntity.swift in Sources */,
 				BAE7210428F8B49F0062C9B3 /* MovieListEntity.swift in Sources */,
 				BAF5D39628F7CCBF0037720D /* HomePresenter.swift in Sources */,
 				BA98D83E28F8D8160015E2A0 /* MovieDetailLocalDataManager.swift in Sources */,

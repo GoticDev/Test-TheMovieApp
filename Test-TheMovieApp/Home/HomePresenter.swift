@@ -21,17 +21,11 @@ class HomePresenter  {
 extension HomePresenter: HomePresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
-//        interactor?.getMoviesDataInteractor()
-        print("me ha llamado la view")
         view?.setInitialSetup(placeHolder: "Ingresa tu nombre",
                               selfieButtonTitle: "Capturar Selfie",
                               sendDataButtonTitle: "Enviar Datos",
                               showMovieListTitle: "Mostrar lista de peliculas",
                               background: UIColor.secondarySystemFill)
-    }
-    
-    func getMoviesDataPresenter() {
-        interactor?.getMoviesDataInteractor()
     }
     
     func showMovieListView() {

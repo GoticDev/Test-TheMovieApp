@@ -33,8 +33,6 @@ class MoviesListInteractor: MoviesListInteractorInputProtocol {
 extension MoviesListInteractor: MoviesListRemoteDataManagerOutputProtocol {
     func sendDataMoviesList(with model: MovieListEntity) {
         // TODO: Implement use case methods
-        print("si llega")
-//        self.movieList = model
         presenter?.interactorSendListMoviesData(receivedData: model.results)
     }
     

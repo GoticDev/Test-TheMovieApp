@@ -32,7 +32,6 @@ protocol HomePresenterProtocol: AnyObject {
     var router: HomeRouterProtocol? { get set }
     
     func viewDidLoad()
-    func getMoviesDataPresenter()
     func showMovieListView()
 }
 
@@ -45,8 +44,6 @@ protocol HomeInteractorInputProtocol: AnyObject {
     var presenter: HomeInteractorOutputProtocol? { get set }
     var localDatamanager: HomeLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: HomeRemoteDataManagerInputProtocol? { get set }
-    
-    func getMoviesDataInteractor()
 }
 
 protocol HomeDataManagerInputProtocol: AnyObject {
@@ -56,12 +53,10 @@ protocol HomeDataManagerInputProtocol: AnyObject {
 protocol HomeRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: HomeRemoteDataManagerOutputProtocol? { get set }
-    func getMoviesDataManager()
 }
 
 protocol HomeRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
-    func sendDataMoviesList(with model: [HomeEntity])
 }
 
 protocol HomeLocalDataManagerInputProtocol: AnyObject {
